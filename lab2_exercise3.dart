@@ -18,4 +18,20 @@ void main() {
   print('Updated scores: $studentScores');
   print('All subjects in map: ${studentScores.keys}');
   print('All scores in map: ${studentScores.values}');
+  
+  print('---');
+  print('Subjects containing "a":');
+  studentScores.forEach((subject, score) {
+    if (subject.toLowerCase().contains('a')) {
+      print('$subject: $score');
+    }
+  });
+
+  print('---');
+  print('Subjects with score > 50:');
+  studentScores.forEach((subject, score) {
+    if (score > 50) {
+      print('$subject: $score');
+    }
+  });
 }
